@@ -1,0 +1,38 @@
+image: python:3.11
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - .cache/pip
+
+# 使用国内镜像加速安装
+before_script:
+  - pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+build:
+  stage: build
+  script:
+    - pip install mkdocs mkdocs-material 
+    - pip install pymdown-extensions Pygments fontawesome-markdown
+    - mkdocs build
+    - mv site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - echo "Deploying to JiHu(GitLab) Pages..."
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
