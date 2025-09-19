@@ -10,6 +10,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      contents: read
     
     environment:
       name: github-pages
@@ -19,19 +20,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        # 如果您需要获取所有历史提交，可以设置为true
         fetch-depth: 0
     
     - name: Setup Pages
-      uses: actions/configure-pages@v3
+      uses: actions/configure-pages@v4
     
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
-        # 指定您本地构建好的 site 文件夹路径
-        # 注意：GitHub Actions 中的路径是相对于仓库根目录的
         path: ./site/
     
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
