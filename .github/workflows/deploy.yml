@@ -22,6 +22,19 @@ jobs:
       with:
         fetch-depth: 0
     
+    - name: List files (for debugging)
+      run: ls -la
+    
+    - name: Verify site directory
+      run: |
+        if [ ! -d "site" ]; then
+          echo "ERROR: site directory not found!"
+          ls -la
+          exit 1
+        fi
+        echo "Site directory contents:"
+        ls -la site/
+    
     - name: Setup Pages
       uses: actions/configure-pages@v4
     
