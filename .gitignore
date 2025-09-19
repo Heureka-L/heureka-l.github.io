@@ -1,3 +1,2 @@
-./site       # MkDocs 本地构建目录
 .cache/     # Pip 缓存
 __pycache__ # Python 缓存
