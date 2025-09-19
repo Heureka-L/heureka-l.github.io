@@ -25,15 +25,15 @@ jobs:
     - name: List files (for debugging)
       run: ls -la
     
-    - name: Verify site directory
+    - name: Verify root directory contains website files
       run: |
-        if [ ! -d "site" ]; then
-          echo "ERROR: site directory not found!"
+        if [ ! -f "index.html" ]; then
+          echo "ERROR: index.html not found in root directory!"
           ls -la
           exit 1
         fi
-        echo "Site directory contents:"
-        ls -la site/
+        echo "Root directory contents:"
+        ls -la
     
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -41,7 +41,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./site/
+        path: ./  # 上传整个根目录，而不是 site/ 子目录
     
     - name: Deploy to GitHub Pages
       id: deployment
