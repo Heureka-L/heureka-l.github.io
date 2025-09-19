@@ -4,15 +4,17 @@ on:
   push:
     branches: [ main ]
 
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     container: python:3.11
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        # 获取完整历史以支持 gh-pages 分支部署
+        fetch-depth: 0
       
     - name: Cache pip packages
       uses: actions/cache@v3
@@ -38,23 +40,11 @@ jobs:
     - name: Build site
       run: mkdocs build
     
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: site/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
-    steps:
     - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+        # 如果您的源文件在子目录中，请取消注释并修改下面的路径
+        # publish_branch: gh-pages
+        # keep_files: false
