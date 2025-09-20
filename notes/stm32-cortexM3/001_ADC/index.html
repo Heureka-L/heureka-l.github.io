@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#p-align-centerstm32-adc" class="md-skip">
+        <a href="#stm32-adc" class="md-skip">
           Skip to content
         </a>
       
@@ -576,7 +576,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stm32-adc" class="md-nav__link">
+  <a href="#stm32-adc_1" class="md-nav__link">
     <span class="md-ellipsis">
       三、stm32-ADC结构
     </span>
@@ -1032,7 +1032,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stm32-adc" class="md-nav__link">
+  <a href="#stm32-adc_1" class="md-nav__link">
     <span class="md-ellipsis">
       三、stm32-ADC结构
     </span>
@@ -1269,7 +1269,7 @@
 
 
 
-<h1 id="p-align-centerstm32-adc"><code>&lt;p align = "center"&gt;</code>STM32外设-ADC<a class="headerlink" href="#p-align-centerstm32-adc" title="Permanent link">&para;</a></h1>
+<h1 id="stm32-adc">STM32外设-ADC<a class="headerlink" href="#stm32-adc" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="adc">一、ADC简介<a class="headerlink" href="#adc" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -1286,7 +1286,7 @@
 <p><img alt="840X535/008ad3O3gy1i5gt5c6o02j30nc0evq78.jpg" src="https://tc-new.z.wiki/autoupload/f/e8A6Jk-VJqwzQtipPGE_GIRnRToH7fGIq3WWEFurGTmyl5f0KlZfm6UsKj-HyTuv/20250920/bA0g/840X535/008ad3O3gy1i5gt5c6o02j30nc0evq78.jpg" /></p>
 <p>逐次逼近型ADC（SAR ADC）是一种常见的模数转换器，它通过一种“<strong>二分搜索</strong>”策略逐步确定输入模拟电压对应的数字值。其工作过程始于采样保持电路对输入电压进行捕获，随后内部数模转换器（DAC）从最高有效位（MSB）开始，逐次产生不同的参考电压与输入电压进行比较。每次比较后，根据比较器的输出结果（0或1）来锁定或舍弃当前位，并调整下一次的参考电压，逐步逼近实际输入值。这一过程就像天平称重，通过依次尝试不同砝码（对应二进制位的权重）来精确测量。SAR ADC在速度、精度和功耗之间取得了良好平衡，因此被广泛应用于中速高精度的数据采集系统、传感器接口和工业控制等领域。</p>
 <hr />
-<h2 id="stm32-adc">三、stm32-ADC结构<a class="headerlink" href="#stm32-adc" title="Permanent link">&para;</a></h2>
+<h2 id="stm32-adc_1">三、stm32-ADC结构<a class="headerlink" href="#stm32-adc_1" title="Permanent link">&para;</a></h2>
 <h3 id="adc_2">ADC框图<a class="headerlink" href="#adc_2" title="Permanent link">&para;</a></h3>
 <p><img alt="448X583/008ad3O3gy1i5gt5c6o02j30nc0evq78.jpg" src="https://tc-new.z.wiki/autoupload/f/e8A6Jk-VJqwzQtipPGE_GIRnRToH7fGIq3WWEFurGTmyl5f0KlZfm6UsKj-HyTuv/20250920/a9NY/448X583/008ad3O3gy1i5gt5c6o02j30nc0evq78.jpg" /></p>
 <h3 id="_1">基本结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
