@@ -1,5 +1,590 @@
 /* docs/stylesheets/extra.css */
 
+/* 首页特定样式 - 隐藏侧边栏 */
+body.homepage .md-sidebar--primary,
+body.homepage .md-sidebar--secondary {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* 移动端菜单修复 - 基于Material Design结构 */
+@media screen and (max-width: 76.1875em) {
+  /* 首页隐藏侧边栏的覆盖修复 */
+  body.homepage .md-sidebar--primary {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* 移动端侧边栏基础样式 */
+  .md-sidebar--primary {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80% !important;
+    max-width: 320px !important;
+    height: 100vh !important;
+    background: white !important;
+    z-index: 1000 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important; /* 添加阴影效果 */
+    will-change: transform !important; /* 性能优化 */
+  }
+  
+  /* 当抽屉被选中时显示侧边栏 - 正确的兄弟选择器 */
+  #__drawer:checked ~ .md-container .md-sidebar--primary,
+  #__drawer:checked ~ .md-sidebar--primary,
+  #__drawer[data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
+    transform: translateX(0) !important;
+  }
+  
+  /* 遮罩层样式 - 确保覆盖整个视口 */
+  .md-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important; /* 添加点击手势 */
+  }
+  
+  /* 当抽屉被选中时显示遮罩层 */
+  #__drawer:checked ~ .md-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* 菜单按钮保持可见 */
+  .md-header__button[for="__drawer"] {
+    z-index: 1001 !important;
+  }
+  
+  /* 侧边栏内部样式优化 */
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    height: 100% !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .md-sidebar--primary .md-sidebar__inner {
+    padding: 1rem 0 !important;
+  }
+  
+  /* 导航标题样式 */
+  .md-sidebar--primary .md-nav__title {
+    background: #f5f5f5 !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+    font-weight: 600 !important;
+  }
+  
+  /* 导航列表样式 */
+  .md-sidebar--primary .md-nav__list {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .md-sidebar--primary .md-nav__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  .md-sidebar--primary .md-nav__link {
+    display: block !important;
+    padding: 0.75rem 1rem !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease !important;
+  }
+  
+  .md-sidebar--primary .md-nav__link:hover {
+    background: rgba(0, 0, 0, 0.04) !important;
+  }
+  
+  /* 深色模式适配 */
+  [data-md-color-scheme="slate"] .md-sidebar--primary {
+    background: #1e1e1e !important;
+    border-right-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__title {
+    background: #2d2d2d !important;
+    border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link {
+    color: #e0e0e0 !important;
+  }
+  
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+  
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+/* 全局重置 - 移除所有默认边距 */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 首页特定样式 */
+.md-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+}
+
+.md-main__inner {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.md-grid {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 移除主要内容区域的默认边距 */
+.md-main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 移除顶部导航栏下方的边距 */
+.md-header {
+    margin-bottom: 0 !important;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: -1rem;
+    background: url('../background/光影侧脸美女.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* 主要内容区域样式 */
+.main-content-section {
+    background: transparent;
+    padding: 4rem 2rem;
+    margin: -4rem auto 0 auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 6px rgba(255, 255, 255, 0.6),
+        0 0 12px rgba(255, 255, 255, 0.4),
+        -1px -1px 0 rgba(255, 255, 255, 0.5),
+        1px -1px 0 rgba(255, 255, 255, 0.5),
+        -1px 1px 0 rgba(255, 255, 255, 0.5),
+        1px 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -0.5rem;
+}
+
+.hero-buttons .md-button {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .md-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.hero-buttons .md-button--primary {
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.hero-buttons .md-button--primary:hover {
+    background-color: #303f9f;
+    border-color: #303f9f;
+}
+
+/* 主要内容区域样式 */
+.main-content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 0 2rem;
+    background: white;
+}
+
+/* 功能卡片网格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    color: #3f51b5;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.feature-card a {
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.feature-card a:hover {
+    color: #1976d2;
+    text-decoration: underline;
+}
+
+/* 三栏式导航样式 */
+.three-column-nav {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin-top: -2px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.nav-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nav-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-bottom: 0.75rem;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(52, 152, 219, 0.1);
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.nav-links a:hover {
+    background: rgba(52, 152, 219, 0.2);
+    color: #2980b9;
+    transform: translateX(4px);
+    border-color: rgba(52, 152, 219, 0.4);
+}
+
+.nav-links a::before {
+    content: '→';
+    margin-right: 0.5rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .three-column-nav {
+        padding: 2rem 1rem;
+    }
+    
+    .nav-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .nav-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .nav-icon {
+        font-size: 2.5rem;
+    }
+    
+    .nav-card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 更新区域 */
+.update-section {
+    background: rgba(248, 249, 250, 0.9);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+    border-left: 4px solid #2196f3;
+    backdrop-filter: blur(10px);
+}
+
+.update-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.update-section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.update-section li:last-child {
+    border-bottom: none;
+}
+
+.update-section a {
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.update-section a:hover {
+    text-decoration: underline;
+}
+
+/* 关于区域 */
+.about-section {
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+    text-align: center;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.about-section h2 {
+    color: #3f51b5;
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 50vh;
+        margin: 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons .md-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 深色模式适配 */
+[data-md-color-scheme="slate"] .hero-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%),
+                url('../background/光影侧脸美女.png') center/cover;
+}
+
+[data-md-color-scheme="slate"] .feature-card {
+    background: rgba(45, 55, 72, 0.95);
+    border-color: rgba(74, 85, 104, 0.5);
+    color: #e2e8f0;
+}
+
+[data-md-color-scheme="slate"] .feature-card p {
+    color: #a0aec0;
+}
+
+[data-md-color-scheme="slate"] .update-section {
+    background: rgba(45, 55, 72, 0.9);
+    border-left-color: #63b3ed;
+}
+
+[data-md-color-scheme="slate"] .about-section {
+    background: rgba(45, 55, 72, 0.9);
+    border-color: rgba(74, 85, 104, 0.5);
+}
+
 /* 只将底部导航栏（上一页/下一页）设置为白色 */
 .md-footer__inner {
   background-color: white !important;
@@ -54,8 +639,6 @@
   color: var(--md-accent-fg-color) !important;
 }
 
-/* docs/stylesheets/extra.css */
-
 /* 完全移除底部导航栏（上一页/下一页部分） */
 .md-footer__inner {
   display: none !important;
@@ -64,4 +647,59 @@
 /* 保留版权信息栏 */
 .md-footer-meta {
   display: block !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 移除底部所有可能的留白 */
+.md-footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 确保最后一个内容元素没有底部边距 */
+.main-content-section > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 强制移除所有可能的底部间距 */
+.md-main__inner {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.md-container {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 移除底部版权栏的所有内边距 */
+.md-footer-meta {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 确保内容区域与底部导航栏之间没有间隙 */
+.md-main {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  min-height: auto !important;
+}
+
+/* 移除内容区域和底部之间的所有可能间距 */
+.md-content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 确保主要内容区域没有底部间距 */
+.container {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 使用负边距强制消除间隙 */
+.md-footer {
+  margin-top: -1px !important;
 }
