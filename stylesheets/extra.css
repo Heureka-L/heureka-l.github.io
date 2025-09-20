@@ -176,7 +176,7 @@ html, body {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     margin-top: -1rem;
-    background: url('../background/光影侧脸美女.png') center/cover;
+    background: url('https://tc-new.z.wiki/autoupload/f/e8A6Jk-VJqwzQtipPGE_GIRnRToH7fGIq3WWEFurGTmyl5f0KlZfm6UsKj-HyTuv/20250920/vWMG/3840X2160/%E5%85%89%E5%BD%B1%E4%BE%A7%E8%84%B8%E7%BE%8E%E5%A5%B3.png/webp') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -562,7 +562,7 @@ html, body {
 /* 深色模式适配 */
 [data-md-color-scheme="slate"] .hero-section {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%),
-                url('../background/光影侧脸美女.png') center/cover;
+                url('https://tc-new.z.wiki/autoupload/f/e8A6Jk-VJqwzQtipPGE_GIRnRToH7fGIq3WWEFurGTmyl5f0KlZfm6UsKj-HyTuv/20250920/vWMG/3840X2160/%E5%85%89%E5%BD%B1%E4%BE%A7%E8%84%B8%E7%BE%8E%E5%A5%B3.png/webp') center/cover;
 }
 
 [data-md-color-scheme="slate"] .feature-card {
