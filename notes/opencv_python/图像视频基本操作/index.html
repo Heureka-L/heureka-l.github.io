@@ -12,28 +12,28 @@
         <meta name="author" content="Heureka">
       
       
-        <link rel="canonical" href="https://Heureka.github.io/Miscellaneous_essays/Miscellaneous_essays/">
+        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
       
       
-        <link rel="prev" href="../../Project/%E5%9F%BA%E4%BA%8E%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%9A%84%E8%AF%BE%E5%A0%82%E8%80%83%E5%8B%A4%E7%B3%BB%E7%BB%9F/">
+        <link rel="prev" href="../../stm32-cortexM3/001_ADC/">
       
       
-        <link rel="next" href="../../about/">
+        <link rel="next" href="../../../material/material/">
       
       
-      <link rel="icon" href="../../favicon.ico">
+      <link rel="icon" href="../../../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>杂谈随笔 - Heureka's Data Station</title>
+        <title>图像视频基本操作 - Heureka's Data Station</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2025920" class="md-skip">
+        <a href="#opencv" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Heureka&#39;s Data Station" class="md-header__button md-logo" aria-label="Heureka's Data Station" data-md-component="logo">
+    <a href="../../.." title="Heureka&#39;s Data Station" class="md-header__button md-logo" aria-label="Heureka's Data Station" data-md-component="logo">
       
-  <img src="../../favicon.ico" alt="logo">
+  <img src="../../../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              杂谈随笔
+              图像视频基本操作
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -239,6 +239,8 @@
   
   
   
+    
+  
   
     
     
@@ -246,11 +248,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../notes/stm32-cortexM3/001_ADC/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../stm32-cortexM3/001_ADC/" class="md-tabs__link">
           
   
   
@@ -273,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../material/material/" class="md-tabs__link">
+      <a href="../../../material/material/" class="md-tabs__link">
         
   
   
@@ -294,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Project/template/" class="md-tabs__link">
+        <a href="../../../Project/template/" class="md-tabs__link">
           
   
   
@@ -312,11 +316,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../Miscellaneous_essays/Miscellaneous_essays/" class="md-tabs__link">
         
   
   
@@ -335,7 +337,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
   
@@ -370,9 +372,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Heureka&#39;s Data Station" class="md-nav__button md-logo" aria-label="Heureka's Data Station" data-md-component="logo">
+    <a href="../../.." title="Heureka&#39;s Data Station" class="md-nav__button md-logo" aria-label="Heureka's Data Station" data-md-component="logo">
       
-  <img src="../../favicon.ico" alt="logo">
+  <img src="../../../favicon.ico" alt="logo">
 
     </a>
     Heureka's Data Station
@@ -387,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -406,8 +408,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -419,17 +423,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -442,7 +449,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             技术笔记
@@ -501,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notes/stm32-cortexM3/001_ADC/" class="md-nav__link">
+      <a href="../../stm32-cortexM3/001_ADC/" class="md-nav__link">
         
   
   
@@ -529,8 +536,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -543,11 +552,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -563,7 +572,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             opencv python
@@ -574,10 +583,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../notes/opencv_python/%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    图像视频基本操作
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -588,6 +619,83 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像操作：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="图像操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像读取显示并保存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像灰度处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      视频操作：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="视频操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      视频读取显示并保存
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -615,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/material/" class="md-nav__link">
+      <a href="../../../material/material/" class="md-nav__link">
         
   
   
@@ -684,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Project/template/" class="md-nav__link">
+      <a href="../../../Project/template/" class="md-nav__link">
         
   
   
@@ -707,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Project/%E5%9F%BA%E4%BA%8E%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%9A%84%E8%AF%BE%E5%A0%82%E8%80%83%E5%8B%A4%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+      <a href="../../../Project/%E5%9F%BA%E4%BA%8E%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%9A%84%E8%AF%BE%E5%A0%82%E8%80%83%E5%8B%A4%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
         
   
   
@@ -734,30 +842,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    杂谈随笔
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Miscellaneous_essays/Miscellaneous_essays/" class="md-nav__link">
         
   
   
@@ -768,33 +856,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#2025920" class="md-nav__link">
-    <span class="md-ellipsis">
-      2025年9月20日
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -806,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   
@@ -838,6 +899,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -846,11 +909,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2025920" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2025年9月20日
+      图像操作：
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="图像操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像读取显示并保存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      图像灰度处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      视频操作：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="视频操作：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      视频读取显示并保存
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -870,12 +981,118 @@
 
 
 
-  <h1>杂谈随笔</h1>
-
-<h2 id="2025920">2025年9月20日<a class="headerlink" href="#2025920" title="Permanent link">&para;</a></h2>
+<h1 id="opencv">opencv图像视频基本操作<a class="headerlink" href="#opencv" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="_1">图像操作：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">图像读取显示并保存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>Hands on EXP!</p>
+<p>tips:opencv中读取的图像颜色通道默认BGR排列</p>
 </blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;source/lena.jpg&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;./source/output/lena.jpg&#39;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;read false&#39;</span><span class="p">)</span>
+        <span class="n">exec</span><span class="p">()</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="_3">图像灰度处理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>tips:用cv2.cvtClor()函数实现图像转灰度操作</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
+        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ret is false&#39;</span><span class="p">)</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span> <span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;closed&#39;</span><span class="p">)</span>
+            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+            <span class="n">exit</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vedio has been closed&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="_4">视频操作：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">视频读取显示并保存<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>graph LR
+Z[START]--&gt;
+A(读取视频)--&gt;B(获取视频信息)
+C[宽高FPS]--&gt;B
+B--&gt;D(获取或指定视频编码信息)
+D--&gt;E(创建视频写入对象)
+F[输出路径]--&gt;|传参|E
+G[视频编码]--&gt;|传参|E
+B--&gt;|传参|E
+E--&gt;H(写入视频)--&gt;I[END]
+</code></pre></div>
+<blockquote>
+<p>tips:写入视频的视频编码可获取传入视频流的也可以用cv2.VideoWriter_fourcc()函数手动指定</p>
+<p>VideoWriter_fourcc()函数参数：</p>
+<p>*'mp4v'    MPEG-4编码</p>
+<p>*'XVID'     XVID (AVI容器常用）</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">source_path</span> <span class="o">=</span> <span class="s1">&#39;source/test.mp4&#39;</span>
+<span class="n">output_path</span> <span class="o">=</span> <span class="s1">&#39;./source/output/gray_test.mp4&#39;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;can</span><span class="se">\&#39;</span><span class="s1">t open cap&#39;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">()</span>
+    <span class="c1"># 获取宽高和FPS</span>
+    <span class="n">frame_W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
+    <span class="n">frame_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
+    <span class="n">FPS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">))</span>
+    <span class="c1"># 获取视频编码</span>
+    <span class="n">fourcc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FOURCC</span><span class="p">))</span>
+    <span class="c1"># 创建视频写入对象</span>
+    <span class="n">frame_writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span><span class="n">fourcc</span><span class="p">,</span><span class="n">FPS</span><span class="p">,(</span><span class="n">frame_W</span><span class="p">,</span><span class="n">frame_h</span><span class="p">))</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_W</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_h</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
+        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
+            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+            <span class="n">frame_writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)):</span>
+                <span class="k">break</span> 
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ret:</span><span class="si">{</span><span class="n">ret</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+
+    <span class="c1"># 释放资源</span>
+    <span class="n">frame_writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;run over !&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
 
 
 
@@ -913,7 +1130,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Project/%E5%9F%BA%E4%BA%8E%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%9A%84%E8%AF%BE%E5%A0%82%E8%80%83%E5%8B%A4%E7%B3%BB%E7%BB%9F/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 基于人脸识别的课堂考勤系统">
+          <a href="../../stm32-cortexM3/001_ADC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADC模块">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -923,20 +1140,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                基于人脸识别的课堂考勤系统
+                ADC模块
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: 个人简介">
+          <a href="../../../material/material/" class="md-footer__link md-footer__link--next" aria-label="Next: 学习资料">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                个人简介
+                学习资料
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1003,12 +1220,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.tabs.link", "header.autohide", "navigation.footer", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "content.tabs.link", "header.autohide", "navigation.footer", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
