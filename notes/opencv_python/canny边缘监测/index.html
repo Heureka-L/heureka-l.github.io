@@ -12,13 +12,13 @@
         <meta name="author" content="Heureka">
       
       
-        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/">
       
       
-        <link rel="prev" href="../../stm32-cortexM3/001_ADC/">
+        <link rel="prev" href="../%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
       
       
-        <link rel="next" href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/">
+        <link rel="next" href="../Sobel%E7%AE%97%E5%AD%90/">
       
       
       <link rel="icon" href="../../../favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>图像视频基本操作 - Heureka's Data Station</title>
+        <title>边缘监测 - Heureka's Data Station</title>
       
     
     
@@ -145,7 +145,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opencv" class="md-skip">
+        <a href="#canny" class="md-skip">
           Skip to content
         </a>
       
@@ -178,7 +178,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              图像视频基本操作
+              边缘监测
             
           </span>
         </div>
@@ -635,6 +635,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    图像视频基本操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -652,7 +675,7 @@
   
   
   <span class="md-ellipsis">
-    图像视频基本操作
+    边缘监测
     
   </span>
   
@@ -665,7 +688,7 @@
   
   
   <span class="md-ellipsis">
-    图像视频基本操作
+    边缘监测
     
   </span>
   
@@ -688,19 +711,88 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#canny_1" class="md-nav__link">
     <span class="md-ellipsis">
-      图像操作：
+      一、Canny 边缘检测的原理
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="图像操作：">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canny_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为了实现这个目标，Canny 算法包含以下四个关键步骤：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为了实现这个目标，Canny 算法包含以下四个关键步骤：">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、高斯滤波（去噪）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、计算梯度强度和方向
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3nms-non-maximum-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、非极大值抑制（NMS - Non-Maximum Suppression）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、双阈值检测与边缘连接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencvcv2canny" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、opencv中的cv2.canny()函数使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、opencv中的cv2.canny()函数使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数原型
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      图像读取显示并保存
+      参数详解
     </span>
   </a>
   
@@ -709,7 +801,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      图像灰度处理
+      返回值
     </span>
   </a>
   
@@ -723,24 +815,18 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      视频操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="视频操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频读取显示并保存
+      三、代码示例
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
   
 </li>
       
@@ -748,29 +834,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    边缘监测
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1008,19 +1071,88 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#canny_1" class="md-nav__link">
     <span class="md-ellipsis">
-      图像操作：
+      一、Canny 边缘检测的原理
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="图像操作：">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canny_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为了实现这个目标，Canny 算法包含以下四个关键步骤：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为了实现这个目标，Canny 算法包含以下四个关键步骤：">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、高斯滤波（去噪）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、计算梯度强度和方向
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3nms-non-maximum-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、非极大值抑制（NMS - Non-Maximum Suppression）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、双阈值检测与边缘连接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencvcv2canny" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、opencv中的cv2.canny()函数使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、opencv中的cv2.canny()函数使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数原型
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      图像读取显示并保存
+      参数详解
     </span>
   </a>
   
@@ -1029,7 +1161,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      图像灰度处理
+      返回值
     </span>
   </a>
   
@@ -1043,24 +1175,18 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      视频操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="视频操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频读取显示并保存
+      三、代码示例
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
   
 </li>
       
@@ -1080,119 +1206,173 @@
 
 
 
-<h1 id="opencv">opencv图像视频基本操作<a class="headerlink" href="#opencv" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="_1">图像操作：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">图像读取显示并保存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">tips:opencv中读取的图像颜色通道默认BGR排列</p>
-</div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;source/lena.jpg&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;./source/output/lena.jpg&#39;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">else</span> <span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;read false&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">exec</span><span class="p">()</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="_3">图像灰度处理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">tips:用cv2.cvtClor()函数实现图像转灰度操作</p>
-</div>
-<div class="highlight"><span class="filename">demo.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span> <span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ret is false&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span> <span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vedio has been closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<hr />
-<h2 id="_4">视频操作：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">视频读取显示并保存<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-Z[START]--&gt;
-A(读取视频)--&gt;B(获取视频信息)
-C[宽高FPS]--&gt;B
-B--&gt;D(获取或指定视频编码信息)
-D--&gt;E(创建视频写入对象)
-F[输出路径]--&gt;|传参|E
-G[视频编码]--&gt;|传参|E
-B--&gt;|传参|E
-E--&gt;H(写入视频)--&gt;I[END]</code></pre>
-<div class="admonition note">
-<p class="admonition-title">tips:写入视频的视频编码可获取传入视频流的也可以用cv2.VideoWriter_fourcc()函数手动指定</p>
-</div>
+<h1 id="canny"><p align = "center">canny 边缘监测<a class="headerlink" href="#canny" title="Permanent link">&para;</a></h1>
+<h2 id="canny_1">一、Canny 边缘检测的原理<a class="headerlink" href="#canny_1" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>VideoWriter_fourcc()函数参数：</p>
-<p>*'mp4v'    [MPEG-4编码]</p>
-<p>*'XVID'     [XVID (AVI容器常用)]</p>
+<p>​​良好的检测率​​：算法能够尽可能多地标识出图像中的实际边缘，不漏检。
+​​良好的定位性能​​：标识出的边缘要与实际图像中的实际边缘尽可能接近。
+​​最小响应​​：图像中的边缘只能标识一次，并且可能存在的图像噪声不应标识为边缘</p>
 </blockquote>
+<h2 id="canny_2"><strong>为了实现这个目标，Canny 算法包含以下四个关键步骤：</strong><a class="headerlink" href="#canny_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">1、高斯滤波（去噪）<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">边缘检测非常容易受到图像噪声的影响。因此，第一步是使用高斯滤波器对图像进行平滑处理，以去除噪声。</p>
+</div>
+<p><strong>高斯滤波器是一个低通滤波器，它通过一个卷积核与图像进行卷积，模糊图像并减少噪声。卷积核的大小和标准差（σ）决定了模糊的程度。</strong>
+<strong>公式：</strong></p>
+<p align="center"> $G(x,y) = \frac{1}{2\pi\sigma^2}e^{- (x^2+y^2)/2\sigma^2}$</p>
+<hr />
+<h3 id="2">2、计算梯度强度和方向<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">使用 Sobel、Scharr 等算子（Canny 内部使用 Sobel）来计算图像在水平（Gx）和垂直（Gy）方向上的梯度。</p>
+</div>
+<p><strong>根据 Gx 和 Gy，可以计算出每个像素的梯度幅度（强度）和方向:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">梯度方向总是垂直于边缘。梯度幅度越大，该点是边缘的可能性就越高</p>
+</div>
+<p><strong>梯度幅度（Gradient Magnitude）​​:</strong> </p>
+<p align="center"> $G = \sqrt{{G^2~x}+{G^2~y}}$</p>
+
+<p>为了简化计算，有时也会使用：</p>
+<p align="center"> $G = {|{G~x}|+|{G~y}|}$</p>
+
+<p><strong>梯度方向（Gradient Direction）​​:</strong> </p>
+<p align="center">$\theta = arctan2({G~x},{G~y})$</p>
+<hr />
+<h3 id="3nms-non-maximum-suppression">3、非极大值抑制（NMS - Non-Maximum Suppression）<a class="headerlink" href="#3nms-non-maximum-suppression" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">在得到梯度幅度和方向后，图像中可能存在许多“粗”边缘。非极大值抑制的目的是“瘦边”，即只保留局部梯度最大的点，抑制所有其他非极大值的点。</p>
+</div>
+<p><strong>具体做法：​​</strong></p>
+<p>对于每一个像素，检查其梯度方向上的两个相邻像素（例如，一个像素的梯度方向是水平的，则检查其左右两个像素）。
+* 如果当前像素的梯度幅度是这三个点中最大的，则保留其幅度值。
+* 否则，将其幅度抑制为 0（即不是边缘）。
+经过这一步，输出的是一个“细线”的二值图像，其中只包含了最可能是边缘的像素。</p>
+<hr />
+<h3 id="4">4、双阈值检测与边缘连接<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>!!! note 这是 Canny 算法的最后一步，用于确定哪些是真正的边缘，哪些不是。</p>
+<p><strong>​​双阈值（Hysteresis Thresholding）​​:</strong></p>
+<p><strong>设置两个阈值：​​高阈值（maxVal）​​ 和 ​​低阈值（minVal）​​。</strong></p>
+<p><strong>根据像素的梯度幅度进行判断：</strong></p>
+<p>​​强边缘​​：如果梯度幅度 &gt; ​​高阈值​​，则认定其为确定的边缘。</p>
+<p>​​弱边缘​​：如果梯度幅度介于​​低阈值和高阈值​​之间，则认定其为可能的边缘，需要进一步检查。</p>
+<p>​​非边缘​​：如果梯度幅度 &lt; ​​低阈值​​，则直接抑制。</p>
+<p>​​边缘连接（通过滞后现象）​​:
+对于被标记为“弱边缘”的像素，检查它是否与任何一个“强边缘”像素相连接（8邻域内）。
+如果连接，则认为这个弱边缘也是真实边缘的一部分，并将其保留。
+如果不连接，则将其抑制。</p>
+<p>这种方法可以有效地排除由噪声引起的假边缘，同时确保真实的弱边缘（如模糊的、不连续的部分）能够被正确地连接起来。</p>
+<h2 id="opencvcv2canny">二、opencv中的cv2.canny()函数使用<a class="headerlink" href="#opencvcv2canny" title="Permanent link">&para;</a></h2>
+<h3 id="_1">函数原型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">edges</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">threshold1</span><span class="p">,</span> <span class="n">threshold2</span><span class="p">,</span> <span class="n">edges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">apertureSize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">L2gradient</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+更常用的简化形式是：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">edges</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">minVal</span><span class="p">,</span> <span class="n">maxVal</span><span class="p">,</span> <span class="n">apertureSize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">L2gradient</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="_2">参数详解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><code>image</code></strong>: 输入图像，必须是单通道的8位图像（通常是灰度图）。</li>
+<li><strong><code>threshold1</code> (<code>minVal</code>)</strong>: Canny算法第四步中的<strong>低阈值</strong>。</li>
+<li><strong><code>threshold2</code> (<code>maxVal</code>)</strong>: Canny算法第四步中的<strong>高阈值</strong>。<ul>
+<li><code>maxVal</code> 和 <code>minVal</code> 的比值通常在 <strong>2:1</strong> 到 <strong>3:1</strong> 之间。例如，一个常用的起始值是 <code>(100, 200)</code>。</li>
+</ul>
+</li>
+<li><strong><code>apertureSize</code></strong> (可选): Sobel算子用于计算梯度的孔径大小（卷积核尺寸）。默认是 3。可以是 3, 5, 7。</li>
+<li><strong><code>L2gradient</code></strong> (可选): 一个布尔值，用于计算梯度幅度。<ul>
+<li><code>False</code> (默认): 使用更简单的 <span class="arithmatex">\(|G_x| + |G_y|\)</span>。</li>
+<li><code>True</code>: 使用更精确的 <span class="arithmatex">\(\sqrt{G_x^2 + G_y^2}\)</span>（L2范数）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_3">返回值<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>edges</code></strong>: 输出图像，一个单通道的二值图像（黑白图），其中白色像素表示检测到的边缘，黑色表示背景。</li>
+</ul>
+<h2 id="_4">三、代码示例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">source_path</span> <span class="o">=</span> <span class="s1">&#39;source/test.mp4&#39;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">output_path</span> <span class="o">=</span> <span class="s1">&#39;./source/output/gray_test.mp4&#39;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">if</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;can</span><span class="se">\&#39;</span><span class="s1">t open cap&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># 获取宽高和FPS</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">frame_W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">frame_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">FPS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">))</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="c1"># 获取视频编码</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">fourcc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FOURCC</span><span class="p">))</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="c1"># 创建视频写入对象</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">frame_writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span><span class="n">fourcc</span><span class="p">,</span><span class="n">FPS</span><span class="p">,(</span><span class="n">frame_W</span><span class="p">,</span><span class="n">frame_h</span><span class="p">))</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_W</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_h</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            <span class="n">frame_writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)):</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                <span class="k">break</span> 
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ret:</span><span class="si">{</span><span class="n">ret</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>            <span class="k">break</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="c1"># 释放资源</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">frame_writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;run over !&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    <span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># 1. 读取图像并转换为灰度图</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;your_image.jpg&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># 2. 应用Canny边缘检测</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># 参数：输入图像，低阈值，高阈值</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">edges</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># 也可以直接读取灰度图 cv2.Canny(img, 100, 200)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># 3. 显示结果</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;IMG&#39;</span><span class="p">,</span><span class="n">edges</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
 </code></pre></div>
+<p><strong>高级示例：使用滑动条动态调整阈值</strong></p>
+<div class="admonition note">
+<p class="admonition-title">这个示例非常有助于理解 minVal和 maxVal参数的影响</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">nothing</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="c1"># 调函数，用于createTrackbar</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># x为滑条当前值</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 读取图像并转为灰度图</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;your_image.jpg&#39;</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># 创建一个窗口和滑动条</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">cv2</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="s1">&#39;Canny Edges&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">cv2</span><span class="o">.</span><span class="n">createTrackbar</span><span class="p">(</span><span class="s1">&#39;Min Threshold&#39;</span><span class="p">,</span> <span class="s1">&#39;Canny Edges&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">nothing</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">cv2</span><span class="o">.</span><span class="n">createTrackbar</span><span class="p">(</span><span class="s1">&#39;Max Threshold&#39;</span><span class="p">,</span> <span class="s1">&#39;Canny Edges&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">nothing</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="c1"># 获取滑动条的当前位置</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">min_val</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getTrackbarPos</span><span class="p">(</span><span class="s1">&#39;Min Threshold&#39;</span><span class="p">,</span> <span class="s1">&#39;Canny Edges&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">max_val</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getTrackbarPos</span><span class="p">(</span><span class="s1">&#39;Max Threshold&#39;</span><span class="p">,</span> <span class="s1">&#39;Canny Edges&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="c1"># 应用Canny检测</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">edges</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Canny</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="c1"># 显示结果</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Canny Edges&#39;</span><span class="p">,</span> <span class="n">edges</span><span class="p">)</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="c1"># 按ESC键退出循环</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    <span class="n">k</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">27</span><span class="p">:</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>        <span class="k">break</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>核心思想</strong></td>
+<td>通过多阶段算法（滤波-&gt;梯度-&gt;NMS-&gt;双阈值）来最优地检测图像边缘</td>
+</tr>
+<tr>
+<td><strong>关键参数</strong></td>
+<td><code>minVal</code> (低阈值) 和 <code>maxVal</code> (高阈值)。调整它们可以控制边缘的细节程度。比值通常在 2:1 到 3:1</td>
+</tr>
+<tr>
+<td><strong>优点</strong></td>
+<td>抗噪声能力强，检测出的边缘连接性好、更细、更完整</td>
+</tr>
+<tr>
+<td><strong>缺点</strong></td>
+<td>阈值需要手动调整，对于不同的图像可能需要不同的参数</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>任何需要精确、连续边缘的计算机视觉任务，如物体识别、图像分割、三维重建等</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1230,7 +1410,7 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../stm32-cortexM3/001_ADC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADC模块">
+          <a href="../%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 图像视频基本操作">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1240,20 +1420,20 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
                 Previous
               </span>
               <div class="md-ellipsis">
-                ADC模块
+                图像视频基本操作
               </div>
             </div>
           </a>
         
         
           
-          <a href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 边缘监测">
+          <a href="../Sobel%E7%AE%97%E5%AD%90/" class="md-footer__link md-footer__link--next" aria-label="Next: Sobel算子">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                边缘监测
+                Sobel算子
               </div>
             </div>
             <div class="md-footer__button md-icon">

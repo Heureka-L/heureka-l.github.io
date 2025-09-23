@@ -12,13 +12,13 @@
         <meta name="author" content="Heureka">
       
       
-        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B%E5%8F%8A%E4%BA%BA%E7%9C%BC%E6%A3%80%E6%B5%8B/">
       
       
-        <link rel="prev" href="../../stm32-cortexM3/001_ADC/">
+        <link rel="prev" href="../Sobel%E7%AE%97%E5%AD%90/">
       
       
-        <link rel="next" href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/">
+        <link rel="next" href="../../../material/material/">
       
       
       <link rel="icon" href="../../../favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>图像视频基本操作 - Heureka's Data Station</title>
+        <title>人脸检测及人眼检测 - Heureka's Data Station</title>
       
     
     
@@ -145,7 +145,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opencv" class="md-skip">
+        <a href="#opencv-haar" class="md-skip">
           Skip to content
         </a>
       
@@ -178,7 +178,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              图像视频基本操作
+              人脸检测及人眼检测
             
           </span>
         </div>
@@ -635,32 +635,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    图像视频基本操作
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
         
   
   
@@ -671,83 +649,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="图像操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像读取显示并保存
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像灰度处理
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="视频操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频读取显示并保存
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -803,10 +704,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B%E5%8F%8A%E4%BA%BA%E7%9C%BC%E6%A3%80%E6%B5%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    人脸检测及人眼检测
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -817,6 +740,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viola-jones" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、核心原理：Viola-Jones 算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、核心原理：Viola-Jones 算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-haar-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Haar-like 特征（矩形特征）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-integral-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 积分图（Integral Image）—— 快速计算的核心
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adaboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. AdaBoost 算法 —— 特征选择和强分类器构建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cascade" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 级联结构（Cascade）—— 实现高速检测
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencv-haar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、OpenCV 中的预训练 Haar 分类器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、OpenCV 中的预训练 Haar 分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型文件位置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用预训练模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、代码示例：使用预训练模型进行人脸和眼睛检测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、代码示例：使用预训练模型进行人脸和眼睛检测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detectmultiscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      detectMultiScale 参数详解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、优缺点总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、与现代深度学习方法的对比
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1008,28 +1077,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#viola-jones" class="md-nav__link">
     <span class="md-ellipsis">
-      图像操作：
+      一、核心原理：Viola-Jones 算法
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="图像操作：">
+    <nav class="md-nav" aria-label="一、核心原理：Viola-Jones 算法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1-haar-like" class="md-nav__link">
     <span class="md-ellipsis">
-      图像读取显示并保存
+      1. Haar-like 特征（矩形特征）
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#2-integral-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 积分图（Integral Image）—— 快速计算的核心
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adaboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. AdaBoost 算法 —— 特征选择和强分类器构建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cascade" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 级联结构（Cascade）—— 实现高速检测
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencv-haar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、OpenCV 中的预训练 Haar 分类器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、OpenCV 中的预训练 Haar 分类器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型文件位置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用预训练模型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      图像灰度处理
+      三、代码示例：使用预训练模型进行人脸和眼睛检测
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、代码示例：使用预训练模型进行人脸和眼睛检测">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detectmultiscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      detectMultiScale 参数详解
     </span>
   </a>
   
@@ -1043,24 +1187,18 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      视频操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="视频操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频读取显示并保存
+      四、优缺点总结
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、与现代深度学习方法的对比
+    </span>
+  </a>
   
 </li>
       
@@ -1080,119 +1218,177 @@
 
 
 
-<h1 id="opencv">opencv图像视频基本操作<a class="headerlink" href="#opencv" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="_1">图像操作：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">图像读取显示并保存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">tips:opencv中读取的图像颜色通道默认BGR排列</p>
-</div>
+<h1 id="opencv-haar"><p align="center">OpenCV Haar 级联分类器详解</p><a class="headerlink" href="#opencv-haar" title="Permanent link">&para;</a></h1>
+<h2 id="viola-jones">一、核心原理：Viola-Jones 算法<a class="headerlink" href="#viola-jones" title="Permanent link">&para;</a></h2>
+<p>Haar 级联分类器是基于 <strong>Viola-Jones 对象检测框架</strong> 的机器学习方法，由 Paul Viola 和 Michael Jones 在 2001 年的论文《Rapid Object Detection using a Boosted Cascade of Simple Features》中提出。它因其高速度和较好的准确度，尤其是在人脸检测任务上的表现，而变得非常流行。</p>
+<p>该算法的核心思想是通过机器学习，从大量正样本（包含目标的图像）和负样本（不包含目标的图像）中训练出一个<strong>级联的强分类器</strong>，用于快速判断图像中的某个区域是否包含目标对象（如人脸）。</p>
+<p>其成功依赖于三个关键创新：</p>
+<h3 id="1-haar-like">1. Haar-like 特征（矩形特征）<a class="headerlink" href="#1-haar-like" title="Permanent link">&para;</a></h3>
+<p>Haar 特征不是像素值本身，而是通过计算图像中相邻矩形区域的像素和之差来得到的。这些特征类似于卷积核，用于捕捉图像的边缘、线条等简单结构。</p>
+<p><strong>常见的 Haar 特征类型</strong>：</p>
+<ul>
+<li><strong>边缘特征 (Edge Features)</strong>：捕捉左右、上下之间的明暗变化</li>
+<li><strong>线特征 (Line Features)</strong>：捕捉更细的线条结构  </li>
+<li><strong>中心环绕特征 (Four-rectangle Feature)</strong>：捕捉中心与周围区域的差异</li>
+</ul>
+<p><strong>为什么使用这些特征？</strong>
+人脸的许多结构（如眼睛比脸颊深，鼻梁比两侧亮）可以被这些简单的矩形特征有效地描述。计算"像素和之差"比直接处理像素值更高效，且对光照变化有一定的不变性。</p>
+<h3 id="2-integral-image">2. 积分图（Integral Image）—— 快速计算的核心<a class="headerlink" href="#2-integral-image" title="Permanent link">&para;</a></h3>
+<p>计算大量矩形区域的像素和如果使用传统方法会非常慢。积分图是一种数据结构，它允许<strong>在常数时间 O(1) 内</strong>计算出任何矩形区域的像素和，极大地加速了特征计算过程。</p>
+<p><strong>积分图定义</strong>：积分图中任意一点 <code>(x, y)</code> 的值是原图像中从 <code>(0, 0)</code> 到 <code>(x, y)</code> 所构成的矩形区域内所有像素值的和。</p>
+<p><strong>如何计算矩形和</strong>：有了积分图 <code>I</code>，计算矩形 <code>D</code> 的和只需要四次引用操作：</p>
+<p align="center">$Sum(D) = I(x4, y4) - I(x2, y2) - I(x3, y3) + I(x1, y1)$</p>
+
+<h3 id="3-adaboost">3. AdaBoost 算法 —— 特征选择和强分类器构建<a class="headerlink" href="#3-adaboost" title="Permanent link">&para;</a></h3>
+<p>一张图像可以提取出数万甚至数十万个 Haar 特征，但其中绝大多数是无关紧要的。AdaBoost 算法的作用是：</p>
+<ul>
+<li><strong>特征选择</strong>：从海量特征中筛选出最能区分目标（如人脸）和非目标的<strong>少量关键特征</strong></li>
+<li><strong>构建强分类器</strong>：将多个"弱分类器"（每个弱分类器基于一个最好的 Haar 特征）组合成一个<strong>强分类器</strong></li>
+</ul>
+<p>一个弱分类器可能只比随机猜测好一点点，但 AdaBoost 通过加权组合多个弱分类器，可以形成一个非常精确的强分类器。</p>
+<h3 id="4-cascade">4. 级联结构（Cascade）—— 实现高速检测<a class="headerlink" href="#4-cascade" title="Permanent link">&para;</a></h3>
+<p>这是实现实时检测的最关键思想。级联分类器由一系列阶段（Stage）组成，每个阶段都是一个由 AdaBoost 训练得到的强分类器。</p>
+<p><strong>工作流程</strong>：检测窗口像瀑布一样依次通过所有阶段：
+1. 第一个阶段由最简单的几个特征组成，它可以快速<strong>拒绝</strong>掉明显不是人脸的窗口（例如，背景区域）
+2. 只有通过第一阶段的窗口才会被送到更复杂的第二阶段
+3. 以此类推，越到后面的阶段，分类器越复杂，使用的特征越多，判断也越精确
+4. 一个检测窗口必须<strong>通过所有阶段</strong>，才会被最终认定为是一个目标（如人脸）</p>
+<p><strong>优势</strong>：这种结构使得非目标区域在最初的阶段就被快速丢弃，避免了后续不必要的复杂计算，将计算资源集中在"可能"的区域上，从而实现了高速检测。</p>
+<h2 id="opencv-haar_1">二、OpenCV 中的预训练 Haar 分类器<a class="headerlink" href="#opencv-haar_1" title="Permanent link">&para;</a></h2>
+<p>OpenCV 提供了大量预训练好的 Haar 级联分类器模型（<code>.xml</code> 文件），无需用户自己训练即可使用。</p>
+<h3 id="_1">模型文件位置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>这些文件通常位于 OpenCV 的安装目录下：
+- <strong>Windows</strong>: <code>C:\opencv\build\etc\haarcascades\</code>
+- <strong>Mac (通过brew安装)</strong>: <code>/usr/local/opt/opencv/share/opencv4/haarcascades/</code>
+- <strong>Python (可以直接下载)</strong>: 也可以从 <a href="https://github.com/opencv/opencv/tree/master/data/haarcascades">OpenCV GitHub</a> 下载</p>
+<h3 id="_2">常用预训练模型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><strong>人脸检测</strong>:
+- <code>haarcascade_frontalface_default.xml</code>（最常用，正面人脸）
+- <code>haarcascade_frontalface_alt.xml</code>
+- <code>haarcascade_frontalface_alt2.xml</code>
+- <code>haarcascade_profileface.xml</code>（侧面人脸）</p>
+<p><strong>人眼检测</strong>:
+- <code>haarcascade_eye.xml</code>
+- <code>haarcascade_eye_tree_eyeglasses.xml</code>（可检测戴眼镜的眼睛）</p>
+<p><strong>身体检测</strong>:
+- <code>haarcascade_fullbody.xml</code>
+- <code>haarcascade_upperbody.xml</code>
+- <code>haarcascade_lowerbody.xml</code></p>
+<p><strong>其他</strong>:
+- <code>haarcascade_smile.xml</code>（微笑）
+- <code>haarcascade_license_plate.xml</code>（车牌）
+- <code>haarcascade_russian_plate_number.xml</code>（俄罗斯车牌）</p>
+<h2 id="_3">三、代码示例：使用预训练模型进行人脸和眼睛检测<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;source/lena.jpg&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;./source/output/lena.jpg&#39;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">else</span> <span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;read false&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">exec</span><span class="p">()</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">trange</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 回调函数</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">nothing</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1"># 加载haar连级模型</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">face_cascade</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CascadeClassifier</span><span class="p">(</span><span class="s1">&#39;.venv\Lib\site-packages\cv2\data\haarcascade_frontalface_default.xml&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">eyes_cascade</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CascadeClassifier</span><span class="p">(</span><span class="s1">&#39;.venv\Lib\site-packages\cv2\data\haarcascade_eye.xml&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="s1">&#39;935167194_nb3-1-30080.mp4&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">if</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;open faild&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="n">exit</span><span class="p">()</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">frame_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">frame_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">FPS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">))</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">fourcc</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter_fourcc</span><span class="p">(</span><span class="o">*</span><span class="s1">&#39;XVID&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;shape:</span><span class="si">{</span><span class="n">frame_w</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">frame_h</span><span class="si">}</span><span class="se">\n</span><span class="s2">FPS:</span><span class="si">{</span><span class="n">FPS</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="n">delay</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">FPS</span><span class="o">*</span><span class="mi">1000</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;delay:</span><span class="si">{</span><span class="n">delay</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="n">writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="s1">&#39;output.avi&#39;</span><span class="p">,</span> <span class="n">fourcc</span><span class="p">,</span> <span class="n">FPS</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_w</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">frame_h</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">)))</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">fx</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span><span class="n">fy</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ret is none&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            <span class="k">break</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        <span class="n">img_gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        <span class="c1"># 人脸检测</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        <span class="n">faces</span> <span class="o">=</span> <span class="n">face_cascade</span><span class="o">.</span><span class="n">detectMultiScale</span><span class="p">(</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>            <span class="n">img_gray</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>            <span class="n">scaleFactor</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>            <span class="n">minNeighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>            <span class="n">minSize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="p">)</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        <span class="c1"># 人脸框选</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        <span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="ow">in</span> <span class="n">faces</span> <span class="p">:</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>            <span class="n">roi_face</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),(</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">h</span><span class="p">),(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>            <span class="n">eyes</span> <span class="o">=</span> <span class="n">eyes_cascade</span><span class="o">.</span><span class="n">detectMultiScale</span><span class="p">(</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>                <span class="n">roi_face</span><span class="p">,</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>                <span class="n">scaleFactor</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> 
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>                <span class="n">minNeighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>                <span class="n">minSize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>            <span class="p">)</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>            <span class="c1"># 人眼检测并框选</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>            <span class="k">for</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span><span class="n">ey</span><span class="p">,</span><span class="n">ew</span><span class="p">,</span><span class="n">eh</span><span class="p">)</span> <span class="ow">in</span> <span class="n">eyes</span><span class="p">:</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>                <span class="n">roi_eyes</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">roi_face</span><span class="p">,(</span><span class="n">ex</span><span class="p">,</span><span class="n">ey</span><span class="p">),(</span><span class="n">ex</span><span class="o">+</span><span class="n">ew</span><span class="p">,</span><span class="n">ey</span><span class="o">+</span><span class="n">eh</span><span class="p">),(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>                <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">roi_eyes</span><span class="p">)</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>                <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;FACE&#39;</span><span class="p">,</span><span class="n">roi_eyes</span><span class="p">)</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>                <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>                <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>                    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>                    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>                    <span class="n">exit</span><span class="p">()</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="_3">图像灰度处理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="detectmultiscale"><code>detectMultiScale</code> 参数详解<a class="headerlink" href="#detectmultiscale" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>scaleFactor</code></strong>: 必须大于 1.0（如 1.05, 1.1, 1.2）。值越小，能检测到更小的人脸，但计算速度越慢</li>
+<li><strong><code>minNeighbors</code></strong>: 控制检测的灵敏度。值越低，越容易检测到对象，但假正例（错误检测）也越多。值越高，检测越严格，越可靠，但可能漏掉一些人脸</li>
+<li><strong><code>minSize</code></strong> / <strong><code>maxSize</code></strong>: 指定要检测的目标的尺寸范围，可以有效地减少计算量和错误检测</li>
+</ul>
+<h2 id="_4">四、优缺点总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⚡ <strong>速度快</strong>，适合实时应用</td>
+<td>❌ <strong>检测精度有限</strong>，不如现代深度学习模型（如YOLO, SSD）</td>
+</tr>
+<tr>
+<td>💾 模型文件小（.xml文件）</td>
+<td>❌ 容易出现<strong>误检（False Positives）</strong> 和<strong>漏检（False Negatives）</strong></td>
+</tr>
+<tr>
+<td>🔧 开源，OpenCV 内置，<strong>开箱即用</strong></td>
+<td>❌ 对<strong>遮挡、非正面、极端光照条件</strong>的鲁棒性差</td>
+</tr>
+<tr>
+<td>🎯 在<strong>正面、光照良好</strong>的人脸检测上效果很好</td>
+<td>❌ 需要为<strong>不同对象（猫、车等）</strong> 重新训练模型，而预训练模型有限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">五、与现代深度学习方法的对比<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>虽然 Haar 级联分类器在历史上非常重要，但现在对于要求高精度的应用，通常会被基于深度学习的目标检测器所取代，例如：</p>
+<ul>
+<li><strong>更准确</strong>：YOLO, SSD, Faster R-CNN</li>
+<li><strong>集成在 OpenCV 中</strong>：<code>cv2.dnn.readNetFrom...</code> 系列函数，可以加载如 Caffe, TensorFlow, Darknet 等框架训练的网络</li>
+</ul>
 <div class="admonition note">
-<p class="admonition-title">tips:用cv2.cvtClor()函数实现图像转灰度操作</p>
+<p class="admonition-title">Haar 级联分类器由于其轻量级和速度，在计算资源有限的嵌入式设备上仍然有其用武之地</p>
 </div>
-<div class="highlight"><span class="filename">demo.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span> <span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ret is false&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span> <span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vedio has been closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<hr />
-<h2 id="_4">视频操作：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">视频读取显示并保存<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-Z[START]--&gt;
-A(读取视频)--&gt;B(获取视频信息)
-C[宽高FPS]--&gt;B
-B--&gt;D(获取或指定视频编码信息)
-D--&gt;E(创建视频写入对象)
-F[输出路径]--&gt;|传参|E
-G[视频编码]--&gt;|传参|E
-B--&gt;|传参|E
-E--&gt;H(写入视频)--&gt;I[END]</code></pre>
-<div class="admonition note">
-<p class="admonition-title">tips:写入视频的视频编码可获取传入视频流的也可以用cv2.VideoWriter_fourcc()函数手动指定</p>
-</div>
-<blockquote>
-<p>VideoWriter_fourcc()函数参数：</p>
-<p>*'mp4v'    [MPEG-4编码]</p>
-<p>*'XVID'     [XVID (AVI容器常用)]</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">source_path</span> <span class="o">=</span> <span class="s1">&#39;source/test.mp4&#39;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">output_path</span> <span class="o">=</span> <span class="s1">&#39;./source/output/gray_test.mp4&#39;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">if</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;can</span><span class="se">\&#39;</span><span class="s1">t open cap&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># 获取宽高和FPS</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">frame_W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">frame_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">FPS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">))</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="c1"># 获取视频编码</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">fourcc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FOURCC</span><span class="p">))</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="c1"># 创建视频写入对象</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">frame_writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span><span class="n">fourcc</span><span class="p">,</span><span class="n">FPS</span><span class="p">,(</span><span class="n">frame_W</span><span class="p">,</span><span class="n">frame_h</span><span class="p">))</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_W</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_h</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            <span class="n">frame_writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)):</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                <span class="k">break</span> 
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ret:</span><span class="si">{</span><span class="n">ret</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>            <span class="k">break</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="c1"># 释放资源</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">frame_writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;run over !&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
 
 
 
@@ -1230,7 +1426,7 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../stm32-cortexM3/001_ADC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADC模块">
+          <a href="../Sobel%E7%AE%97%E5%AD%90/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sobel算子">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1240,20 +1436,20 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
                 Previous
               </span>
               <div class="md-ellipsis">
-                ADC模块
+                Sobel算子
               </div>
             </div>
           </a>
         
         
           
-          <a href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 边缘监测">
+          <a href="../../../material/material/" class="md-footer__link md-footer__link--next" aria-label="Next: 学习资料">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                边缘监测
+                学习资料
               </div>
             </div>
             <div class="md-footer__button md-icon">

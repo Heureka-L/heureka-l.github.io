@@ -12,13 +12,13 @@
         <meta name="author" content="Heureka">
       
       
-        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+        <link rel="canonical" href="https://Heureka.github.io/notes/opencv_python/Sobel%E7%AE%97%E5%AD%90/">
       
       
-        <link rel="prev" href="../../stm32-cortexM3/001_ADC/">
+        <link rel="prev" href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/">
       
       
-        <link rel="next" href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/">
+        <link rel="next" href="../%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B%E5%8F%8A%E4%BA%BA%E7%9C%BC%E6%A3%80%E6%B5%8B/">
       
       
       <link rel="icon" href="../../../favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>图像视频基本操作 - Heureka's Data Station</title>
+        <title>Sobel算子 - Heureka's Data Station</title>
       
     
     
@@ -145,7 +145,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#opencv" class="md-skip">
+        <a href="#sobelopencv" class="md-skip">
           Skip to content
         </a>
       
@@ -178,7 +178,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              图像视频基本操作
+              Sobel算子
             
           </span>
         </div>
@@ -635,32 +635,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    图像视频基本操作
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E5%9B%BE%E5%83%8F%E8%A7%86%E9%A2%91%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="md-nav__link">
         
   
   
@@ -671,83 +649,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="图像操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像读取显示并保存
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      图像灰度处理
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频操作：
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="视频操作：">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      视频读取显示并保存
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -780,10 +681,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Sobel%E7%AE%97%E5%AD%90/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sobel算子
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -794,6 +717,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sobel" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、Sobel算子的原理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Sobel算子的原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 什么是梯度？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sobel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sobel算子的工作方式：卷积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sobel卷积核
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 计算梯度幅度和方向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencvcv2sobel" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、OpenCV中的cv2.Sobel()函数使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、OpenCV中的cv2.Sobel()函数使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数详解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、代码示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、代码示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1xy" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例1：基础用法（分别计算X和Y方向）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例2：合成梯度幅度（最常用的方式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3ddepth" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例3：常见错误演示（错误使用ddepth）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobelcanny" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、Sobel与Canny的对比
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1008,28 +1086,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#sobel" class="md-nav__link">
     <span class="md-ellipsis">
-      图像操作：
+      一、Sobel算子的原理
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="图像操作：">
+    <nav class="md-nav" aria-label="一、Sobel算子的原理">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      图像读取显示并保存
+      1. 什么是梯度？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#2-sobel" class="md-nav__link">
     <span class="md-ellipsis">
-      图像灰度处理
+      2. Sobel算子的工作方式：卷积
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sobel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sobel卷积核
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 计算梯度幅度和方向
     </span>
   </a>
   
@@ -1041,19 +1137,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#opencvcv2sobel" class="md-nav__link">
     <span class="md-ellipsis">
-      视频操作：
+      二、OpenCV中的cv2.Sobel()函数使用
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="视频操作：">
+    <nav class="md-nav" aria-label="二、OpenCV中的cv2.Sobel()函数使用">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      视频读取显示并保存
+      参数详解
     </span>
   </a>
   
@@ -1061,6 +1157,66 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、代码示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、代码示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1xy" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例1：基础用法（分别计算X和Y方向）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例2：合成梯度幅度（最常用的方式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3ddepth" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例3：常见错误演示（错误使用ddepth）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobelcanny" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、Sobel与Canny的对比
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
   
 </li>
       
@@ -1080,119 +1236,196 @@
 
 
 
-<h1 id="opencv">opencv图像视频基本操作<a class="headerlink" href="#opencv" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="_1">图像操作：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">图像读取显示并保存<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h1 id="sobelopencv"><p align="center">Sobel算子原理与OpenCV使用指南</p><a class="headerlink" href="#sobelopencv" title="Permanent link">&para;</a></h1>
+<h2 id="sobel">一、Sobel算子的原理<a class="headerlink" href="#sobel" title="Permanent link">&para;</a></h2>
+<p>Sobel算子是图像处理中最常用的边缘检测算法之一。它的核心思想是<strong>通过计算图像亮度函数的近似梯度来突出边缘</strong>。</p>
+<h3 id="1">1. 什么是梯度？<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>在图像中，"梯度"指向像素强度变化最剧烈的方向，其大小表示变化的剧烈程度。<br />
+<strong>边缘</strong>：就是图像中像素强度发生显著变化的区域。<br />
+<strong>梯度方向</strong>：垂直于边缘的方向。<br />
+<strong>梯度幅度</strong>：边缘的"强度"或"明显程度"。</p>
+<p>因此，通过计算图像的梯度，我们就可以找到图像中的边缘。</p>
+<h3 id="2-sobel">2. Sobel算子的工作方式：卷积<a class="headerlink" href="#2-sobel" title="Permanent link">&para;</a></h3>
+<p>Sobel算子的本质是<strong>通过特定的卷积核（Kernel）与原始图像进行卷积操作</strong>来实现的。  </p>
 <div class="admonition note">
-<p class="admonition-title">tips:opencv中读取的图像颜色通道默认BGR排列</p>
+<p class="admonition-title">卷积操作：将一个小的卷积核在图像上滑动，将核上的每个元素与其覆盖的对应图像像素相乘，然后将所有乘积结果相加，得到输出图像中对应位置的像素值。</p>
 </div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;source/lena.jpg&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">if</span> <span class="n">img</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s1">&#39;./source/output/lena.jpg&#39;</span><span class="p">,</span><span class="n">img</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">else</span> <span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;read false&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">exec</span><span class="p">()</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">main</span><span class="p">()</span>
+<h3 id="3-sobel">3. Sobel卷积核<a class="headerlink" href="#3-sobel" title="Permanent link">&para;</a></h3>
+<p>Sobel算子使用两个3x3的卷积核，分别用于计算<strong>水平方向（Gx）</strong> 和<strong>垂直方向（Gy）</strong> 的梯度近似值。</p>
+<p><strong>水平方向Sobel核 (Gx)</strong>：用于检测<strong>垂直边缘</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Gx = [ -1, 0, 1 ]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     [ -2, 0, 2 ]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     [ -1, 0, 1 ]
 </code></pre></div>
-<h3 id="_3">图像灰度处理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">tips:用cv2.cvtClor()函数实现图像转灰度操作</p>
-</div>
-<div class="highlight"><span class="filename">demo.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span> <span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ret is false&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span> <span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;FRAME&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vedio has been closed&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">main</span><span class="p">()</span>
+<p>这个核在水平方向有权重，对水平的亮度变化不敏感，但对垂直的亮度变化（即左右像素的差异）非常敏感。</p>
+<p><strong>垂直方向Sobel核 (Gy)</strong>：用于检测<strong>水平边缘</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Gy = [ -1, -2, -1 ]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     [ 0, 0, 0 ]
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     [ 1, 2, 1 ]
 </code></pre></div>
-<hr />
-<h2 id="_4">视频操作：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">视频读取显示并保存<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-Z[START]--&gt;
-A(读取视频)--&gt;B(获取视频信息)
-C[宽高FPS]--&gt;B
-B--&gt;D(获取或指定视频编码信息)
-D--&gt;E(创建视频写入对象)
-F[输出路径]--&gt;|传参|E
-G[视频编码]--&gt;|传参|E
-B--&gt;|传参|E
-E--&gt;H(写入视频)--&gt;I[END]</code></pre>
-<div class="admonition note">
-<p class="admonition-title">tips:写入视频的视频编码可获取传入视频流的也可以用cv2.VideoWriter_fourcc()函数手动指定</p>
-</div>
-<blockquote>
-<p>VideoWriter_fourcc()函数参数：</p>
-<p>*'mp4v'    [MPEG-4编码]</p>
-<p>*'XVID'     [XVID (AVI容器常用)]</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">source_path</span> <span class="o">=</span> <span class="s1">&#39;source/test.mp4&#39;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">output_path</span> <span class="o">=</span> <span class="s1">&#39;./source/output/gray_test.mp4&#39;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">if</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;can</span><span class="se">\&#39;</span><span class="s1">t open cap&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">exit</span><span class="p">()</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># 获取宽高和FPS</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">frame_W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">))</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">frame_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">))</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">FPS</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FPS</span><span class="p">))</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="c1"># 获取视频编码</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">fourcc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FOURCC</span><span class="p">))</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="c1"># 创建视频写入对象</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="n">frame_writer</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoWriter</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span><span class="n">fourcc</span><span class="p">,</span><span class="n">FPS</span><span class="p">,(</span><span class="n">frame_W</span><span class="p">,</span><span class="n">frame_h</span><span class="p">))</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_W</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">frame_h</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">while</span> <span class="n">cap</span><span class="o">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="p">:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="n">ret</span><span class="p">,</span><span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            <span class="n">frame_writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">)):</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                <span class="k">break</span> 
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ret:</span><span class="si">{</span><span class="n">ret</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>            <span class="k">break</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="c1"># 释放资源</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">frame_writer</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;run over !&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    <span class="n">main</span><span class="p">()</span>
+<p>这个核在垂直方向有权重，对垂直的亮度变化不敏感，但对水平的亮度变化（即上下像素的差异）非常敏感。</p>
+<p><strong>为什么核的中心是0？</strong><br />
+为了在计算梯度时，给当前像素点本身赋予0的权重，只关注其相邻像素的差异，这使得它对噪声有一定的抵抗力。</p>
+<h3 id="4">4. 计算梯度幅度和方向<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>在图像上分别用Gx和Gy进行卷积后，我们得到了两个矩阵，分别代表了每个像素点在X和Y方向上的梯度分量。</p>
+<p>对于图像中的每一个像素，我们可以计算出其<strong>梯度幅度（G）</strong> 和<strong>梯度方向（θ）</strong>：</p>
+<p><strong>梯度幅度 (G)</strong>：表示边缘的强度。  </p>
+<p align="center"> $ G = \sqrt{G_x^2 + G_y^2} $</p>
+<p>为了简化计算（避免开方），有时也会使用近似值：  </p>
+<p align="center">$|G| = |G_x| + |G_y| $</p>
+
+<p><strong>梯度方向 (θ)</strong>：表示边缘的方向（垂直于实际边缘）。  </p>
+<p align="center">$ \theta = \arctan2(G_y, G_x)  $</p>
+<p>这里的arctan2是一个四象限反正切函数，可以给出一个范围在[-π, π]的角度值。</p>
+<p>最终，我们通常将梯度幅度G作为输出图像，其中较亮的像素表示更强的边缘。</p>
+<h2 id="opencvcv2sobel">二、OpenCV中的cv2.Sobel()函数使用<a class="headerlink" href="#opencvcv2sobel" title="Permanent link">&para;</a></h2>
+<p>函数原型</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">dst</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">ddepth</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">borderType</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
+<p>更常用的简化形式是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">sobel</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">ddepth</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_1">参数详解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><strong>src</strong>：输入图像。</p>
+<p><strong>ddepth</strong>：<strong>极其重要！</strong> 输出图像的深度（数据类型）。由于卷积计算会产生负数，我们通常使用比输入图像更高精度的数据类型来避免截断。</p>
+<ul>
+<li>cv2.CV_8U: 输出8位无符号整数（0-255）。<strong>问题：负数会被截断为0！</strong></li>
+<li>cv2.CV_16S: 输出16位有符号整数。<strong>（常用）</strong></li>
+<li>cv2.CV_32F: 输出32位浮点数。<strong>（常用）</strong></li>
+<li>cv2.CV_64F: 输出64位浮点数。</li>
+</ul>
+<p><strong>dx</strong>：X方向（水平）导数的阶数。设为1表示计算Gx。</p>
+<p><strong>dy</strong>：Y方向（垂直）导数的阶数。设为1表示计算Gy。<br />
+<strong>注意</strong>：dx和dy不能同时为0，但可以同时为1（虽然不常用）。</p>
+<p><strong>ksize</strong>：Sobel核的大小。必须是1, 3, 5, 或7。</p>
+<ul>
+<li>ksize=1：使用1x3或3x1的核（即简单的差分，没有高斯平滑）。</li>
+<li>ksize=3：使用标准的3x3 Sobel核。<strong>（最常用）</strong></li>
+<li>更大的核（5,7）会对图像进行更多的高斯平滑，对噪声更不敏感，但也会模糊边缘。</li>
+</ul>
+<p><strong>scale</strong>：(可选) 计算得到的导数值的缩放因子。默认为1（不缩放）。</p>
+<p><strong>delta</strong>：(可选) 在将结果存储到输出图像之前添加到结果中的值。默认为0。</p>
+<p><strong>borderType</strong>：(可选) 像素外推法，用于处理图像边界。通常使用默认值即可。</p>
+<p><strong>返回值</strong><br />
+dst：输出图像，包含计算得到的导数。</p>
+<h2 id="_2">三、代码示例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1xy">示例1：基础用法（分别计算X和Y方向）<a class="headerlink" href="#1xy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># 读取图像并转换为灰度图</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;your_image.jpg&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1"># 使用Sobel算子</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># 计算X方向梯度（检测垂直边缘）</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">sobel_x</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># 计算Y方向梯度（检测水平边缘）</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">sobel_y</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16S</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># 将数据转换回8位无符号整数（CV_8U）</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1"># 先取绝对值，再将值缩放到0-255</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">abs_x</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">convertScaleAbs</span><span class="p">(</span><span class="n">sobel_x</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="n">abs_y</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">convertScaleAbs</span><span class="p">(</span><span class="n">sobel_y</span><span class="p">)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="c1"># 显示结果</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Original Gray&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">abs_x</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sobel X (Vertical Edges)&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">abs_y</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sobel Y (Horizontal Edges)&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="2">示例2：合成梯度幅度（最常用的方式）<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># ... 续上例代码 ...</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># 方法一：使用OpenCV的addWeighted合并（近似梯度幅度）</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">sobel_combined</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">abs_x</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">abs_y</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># 方法二：手动计算精确的梯度幅度（更准确）</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">sobel_x_float</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_64F</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">sobel_y_float</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_64F</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">magnitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sobel_x_float</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">sobel_y_float</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">sobel_magnitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="n">magnitude</span> <span class="o">/</span> <span class="n">magnitude</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>  <span class="c1"># 归一化并转换</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1"># 显示合成结果</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sobel_combined</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Approx |Gx| + |Gy|&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sobel_magnitude</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Exact sqrt(Gx^2 + Gy^2)&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="3ddepth">示例3：常见错误演示（错误使用ddepth）<a class="headerlink" href="#3ddepth" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 错误用法：直接使用CV_8U，负数梯度会丢失！</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">sobel_x_bad</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_8U</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># 正确用法：使用CV_16S，然后转换</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">sobel_x_good</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">Sobel</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">sobel_x_good</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">convertScaleAbs</span><span class="p">(</span><span class="n">sobel_x_good</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># 对比显示</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sobel_x_bad</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Wrong: CV_8U (Lost Negative Gradients)&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">sobel_x_good</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correct: CV_16S -&gt; CV_8U&#39;</span><span class="p">),</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="sobelcanny">四、Sobel与Canny的对比<a class="headerlink" href="#sobelcanny" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Sobel算子</th>
+<th>Canny边缘检测器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>本质</strong></td>
+<td>梯度计算算子</td>
+<td>完整的边缘检测算法（<strong>使用Sobel作为其内部梯度计算步骤</strong>）</td>
+</tr>
+<tr>
+<td><strong>输出</strong></td>
+<td>梯度幅度和方向</td>
+<td>二值化的边缘图（非边缘为0，边缘为255）</td>
+</tr>
+<tr>
+<td><strong>过程</strong></td>
+<td>单一卷积操作</td>
+<td>多阶段过程（去噪-&gt;梯度-&gt;NMS-&gt;双阈值连接）</td>
+</tr>
+<tr>
+<td><strong>边缘</strong></td>
+<td>"粗"边缘，带有梯度强度信息</td>
+<td>"细"边缘，单像素宽</td>
+</tr>
+<tr>
+<td><strong>噪声</strong></td>
+<td>对噪声比较敏感</td>
+<td>抗噪声能力强（有高斯模糊步骤）</td>
+</tr>
+<tr>
+<td><strong>用途</strong></td>
+<td>基础梯度计算，特征提取</td>
+<td>最终边缘检测，需要清晰、连续的边缘时</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>原理</strong>：Sobel通过水平和垂直方向的卷积核计算图像的梯度，从而找到边缘。<br />
+<strong>核心参数</strong>：ddepth（必须用CV_16S或CV_32F等）、dx、dy、ksize。<br />
+<strong>关键步骤</strong>：计算Sobelx和Sobely-&gt;取绝对值并转换convertScaleAbs()-&gt;可选的梯度合成。<br />
+<strong>典型应用</strong>：不仅是边缘检测，还广泛用于计算机视觉和深度学习中的特征提取。</p>
+<p>理解Sobel算子是掌握更复杂边缘检测技术（如Canny）和图像特征提取的基础。</p>
 
 
 
@@ -1230,7 +1463,7 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../stm32-cortexM3/001_ADC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ADC模块">
+          <a href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 边缘监测">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1240,20 +1473,20 @@ E--&gt;H(写入视频)--&gt;I[END]</code></pre>
                 Previous
               </span>
               <div class="md-ellipsis">
-                ADC模块
+                边缘监测
               </div>
             </div>
           </a>
         
         
           
-          <a href="../canny%E8%BE%B9%E7%BC%98%E7%9B%91%E6%B5%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 边缘监测">
+          <a href="../%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B%E5%8F%8A%E4%BA%BA%E7%9C%BC%E6%A3%80%E6%B5%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 人脸检测及人眼检测">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                边缘监测
+                人脸检测及人眼检测
               </div>
             </div>
             <div class="md-footer__button md-icon">
